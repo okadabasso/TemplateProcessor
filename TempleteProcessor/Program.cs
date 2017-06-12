@@ -11,30 +11,14 @@ namespace TempleteProcessor
 
         static void Main(string[] args)
         {
-            NewMethod();
-        }
+            var parser = new TemplateParser();
+            var template = parser.ParseTemplate(File.ReadAllText("template1.txt"));
+            var content = template.Evaluate();
+            Console.WriteLine(content);
 
-        private static void NewMethod1()
-        {
-            var generator = new ScriptGenerator();
-            var script = generator.Generate("template1.txt");
-            Console.WriteLine(script);
             Console.ReadLine();
         }
 
-        private static void NewMethod()
-        {
-            var tempalte = File.ReadAllText("TextFile1.txt");
-            var option = ScriptOptions.Default.AddImports("System");
-
-            var script = CSharpScript.Create(tempalte, option, typeof(GlobalParams));
-
-            var t =script.RunAsync(new GlobalParams { X = 10, Y = 2 });
-            t.Wait();
-            var returnvalue = t.Result.ReturnValue;
-            Console.WriteLine(returnvalue);
-            Console.ReadLine();
-        }
     }
 
     public class GlobalParams

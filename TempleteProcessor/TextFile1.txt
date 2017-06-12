@@ -1,8 +1,0 @@
-﻿System.IO.StringWriter writer = new System.IO.StringWriter();
-writer.WriteLine("HelloScripting {0} {1} {2}", X,Y, Calc(X,Y));
-writer.WriteLine("Is that ther?");
-return writer.ToString();
-
-int Calc(int x,int y){
-	return x * y;
-}
