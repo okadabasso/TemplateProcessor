@@ -6,3 +6,4 @@ Hello <#= i #>:<#= Calc(i) #><#	} #>
 		return i * 2;
 	}
 #>
+x=<#= X #> y=<#= Y #>

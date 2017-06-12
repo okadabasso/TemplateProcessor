@@ -13,7 +13,7 @@ namespace TempleteProcessor
         {
             var parser = new TemplateParser();
             var template = parser.ParseTemplate(File.ReadAllText("template1.txt"));
-            var content = template.Evaluate();
+            var content = template.Evaluate(new GlobalParams() { X = 101, Y = 201});
             Console.WriteLine(content);
 
             Console.ReadLine();
