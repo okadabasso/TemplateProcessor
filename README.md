@@ -6,3 +6,9 @@ template processor for .Net Core
 
 ## Current State
 WIP
+
+## Requirement
+
+* Microsoft.CodeAnalysis.CSharp
+* Microsoft.CodeAnalysis.CSharp.Scripting
+* Sprache
